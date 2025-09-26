@@ -20,6 +20,14 @@
       text-align: center;
       color: #1a3cb5;
     }
+    .login-box {
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 300px;
+    }
+
     input, select {
       width: 100%;
       padding: 12px;
@@ -27,6 +35,7 @@
       border: 1px solid #ccc;
       border-radius: 8px;
     }
+
     button {
       width: 100%;
       padding: 12px;
@@ -67,6 +76,7 @@
       let user = document.getElementById("username").value;
       let pass = document.getElementById("password").value;
       let error = document.getElementById("error");
+      error.textContent = "";
 
       if (role === "" || user.trim() === "" || pass.trim() === "") {
         error.textContent = "All fields are required!";
