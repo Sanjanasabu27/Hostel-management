@@ -69,7 +69,3 @@ The project follows a **client-server model**:
 - Install **VS Code** or any IDE (Eclipse, IntelliJ, etc.)  
 - Install a **web browser** (Chrome recommended)  
 
-### Steps  
-1. Clone this repository:  
-   ```bash
-   git clone https://github.com/yourusername/hostel-management.git
