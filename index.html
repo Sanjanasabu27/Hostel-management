@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CEAL Hostel Management </title>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Hostel Management </title>
+
+  <!-- ✅ Use this new style block -->
+  <style>
+    /* ---------- THEME ---------- */
+    :root {
+      --navy: #002b5b;
+      --sky: #f2f4f5;
+      --white: #ffffff;
+      --light: #e0f7fa;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('image1.jpg') no-repeat center center/cover;
+      color: var(--white);
+      height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ---------- HEADER ---------- */
+    header {
+      background: var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+    header img {
+      height: 60px;
+      border-radius: 10px;
+    }
+    header h1 {
+      flex: 1;
+      text-align: center;
+      color: var(--sky);
+      font-size: 1.8rem;
+      margin: 0;
+    }
+
+    /* ---------- SIDEBAR ---------- */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      height: 100%;
+      width: 250px;
+      background: var(--navy);
+      padding-top: 80px;
+      transition: 0.4s;
+      z-index: 10;
+    }
+    .sidebar a {
+      display: block;
+      color: var(--white);
+      padding: 15px 25px;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .sidebar a:hover {
+      background: var(--sky);
+    }
+    .menu-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 28px;
+      cursor: pointer;
+      color: var(--sky);
+      z-index: 20;
+    }
+    .sidebar.active {
+      left: 0;
+    }
+
+    /* ---------- MAIN CONTENT ---------- */
+    .main {
+      display: flex;
+      height: calc(100vh - 80px);
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px;
+    }
+
+    .description {
+      width: 55%;
+      background: rgba(0, 43, 91, 0.6);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+    .description h2 {
+      color: var(--sky);
+      font-size: 1.7rem;
+      margin-bottom: 15px;
+    }
+
+    .login-box {
+      width: 35%;
+      background: rgb(228, 227, 232);
+      backdrop-filter: rgb(246, 244, 244);
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    }
+    .login-box h3 {
+      color: var(--sky);
+      margin-bottom: 20px;
+    }
+    .login-box input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      background: rgb(246, 245, 249);
+      border: 1px solid rgb(236, 221, 221);
+      color: var(--white);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.28), inset 0 1px 0 rgba(255,255,255,0.03);
+      backdrop-filter: blur(6px);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.12s ease;
+      outline: none;
+      border-radius: 5px;
+    }
+    .login-box button {
+      width: 95%;
+      padding: 10px;
+      background: var(--sky);
+      color: var(--white);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .login-box button:hover {
+      background: var(--navy);
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      text-align: center;
+      background: var(--navy);
+      padding: 10px;
+      color: var(--light);
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .main { flex-direction: column; }
+      .description, .login-box { width: 100%; margin-bottom: 20px; }
+    }
+  </style>
+</head>
+
+</head>
+<body>
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/en/3/3c/College_of_Engineering_Attingal_logo.png" alt="College Logo">
+    <h1 style="color: var(--white);">College of Engineering Attingal</h1>
+    <h3 style="color: rgba(255, 255, 255, 0.7);">Thiruvananthapuram, Kerala</h3>
+  </header>
+
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+  <div class="sidebar" id="sidebar">
+    <a href="#">• Home</a>
+    <a href="#">• Login</a>
+    <a href="#">• Notices</a>
+    <a href="#">• Contact </a>
+    <a href="#">• Settings</a>
+    <a href="#">• Help</a>
+    <a href="#">• About Us</a>
+    <a href="#">• Feedback</a>
+    <a href="#">• Logout</a>
+  </div>
+  <style>
+    /* ---------- THEME ---------- */
+    :root {
+      --navy: #002b5b;
+      --sky: #0b1164;
+      --white: #ffffff;
+      --light: #e0f7fa;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('image1.jpg') no-repeat center center/cover;
+      color: var(--white);
+      height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* ✨ Slight blur and dark overlay */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3); /* slight dark shade */
+      backdrop-filter: blur(3px); /* smooth blur */
+      z-index: -1; /* stays behind all content */
+    }
+  </style>
+
+  <div class="main">
+    <div class="description">
+      <h2 style="color: var(--white);">Welcome CEAL Hostel Management </h2>
+      <p>
+        Our Hostel Management System is meticulously designed to ensure the safety, comfort, and convenience of every student residing in the hostel. By offering a secure and efficient platform for managing all hostel operations, it simplifies the administrative workload while enhancing the student experience. Key features include automated room allocation, online complaint registration, fee payment tracking, and attendance monitoring, all integrated into a single, user-friendly portal. Digital documentation and real-time record management reduce the need for manual paperwork, enabling faster access to essential information. Transparent communication channels between students and hostel authorities foster a responsive and supportive environment, ensuring that any issues or requests are addressed promptly.
+      </p>
+
+      <p>
+        Beyond administrative efficiency, the system significantly enhances the living experience in the hostel. It offers students the convenience of tracking their own records, submitting requests, and making payments online, reducing unnecessary trips to the office. For administrators, the system provides a comprehensive overview of hostel occupancy, maintenance needs, and fee status, helping maintain a well-organized and safe environment. By combining modern technology with practical management tools, this system not only improves operational efficiency but also creates a comfortable, secure, and academically supportive atmosphere, allowing students to focus entirely on their studies and personal growth.
+      </p>
+    </div>
+
+    <div class="login-box">
+      <h3>Login / Sign In</h3>
+      <input type="text" placeholder="Username" />
+      <input type="password" placeholder="Password" />
+      <button onclick="login()">Sign In</button>
+    </div>
+  </div>
+
+  <footer style="
+  background: linear-gradient(to right, #002b5b, #00b4d8);
+  color: white;
+  text-align: center;
+  padding: 30px 10px;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 -3px 10px rgba(0,0,0,0.2);
+  position: relative;
+  bottom: 0;
+  width: 100%;">
+">
+  <h3 style="margin-bottom: 10px;">College of Engineering Attingal, Trivandrum</h3>
+  <p style="margin: 5px 0;">© 2025 College of Engineering Attingal | Developed by <b>Sanjana Sabu</b></p>
+  <p style="margin: 5px 0;">Contact: 
+    <a href="mailto:principal@cea.ac.in" style="color:#e0f7fa; text-decoration:none;">principal@cea.ac.in</a> | 
+    <a href="tel:+910000000000" style="color:#e0f7fa; text-decoration:none;">0471-2998310</a>
+  </p>
+  <div style="margin-top: 10px;">
+  <a href="https://www.cea.ac.in" target="_blank" title="Official Website" style="margin:0 8px; color:white; text-decoration:none; font-size:18px;">Official Website</a>
+  |
+  <a href="https://www.instagram.com" target="_blank" title="Instagram" style="margin:0 8px; color:white; text-decoration:none; font-size:18px;">Instagram</a>
+  |
+  <a href="https://www.linkedin.com" target="_blank" title="LinkedIn" style="margin:0 8px; color:white; text-decoration:none; font-size:18px;">LinkedIn</a>
+  |
+  <a href="https://www.facebook.com" target="_blank" title="Facebook" style="margin:0 8px; color:white; text-decoration:none; font-size:18px;">Facebook</a>
+  |
+  <a href="https://www.twitter.com" target="_blank" title="Twitter" style="margin:0 8px; color:white; text-decoration:none; font-size:18px;">Twitter</a>
+</div>
+
+  <p style="font-size: 13px; margin-top: 10px; color: #b0e0e6;">
+    Follow us for more updates and campus news 🌸
+  </p>
+</footer>
+
+
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("sidebar").classList.toggle("active");
+    }
+    function login() {
+      alert("Login button clicked — backend to be connected with Java later!");
+    }
+  </script>
+</body>
+</html>
