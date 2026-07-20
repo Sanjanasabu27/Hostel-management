@@ -2,6 +2,8 @@
 A  Java-based project that simplifies student record management and room allocation through a digital websit
 # 🏫 Hostel Management System  
 **College of Engineering Attingal**  
+<img width="1897" height="913" alt="image" src="https://github.com/user-attachments/assets/64a258f5-dc66-4831-bc57-4c9ca3daa2cb" />
+
 
 ---
 
